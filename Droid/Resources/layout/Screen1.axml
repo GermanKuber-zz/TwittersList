@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <ImageView
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="100dp"
+            android:layout_gravity="center"
+            android:id="@+id/HotDotImageView"
+            android:layoutDirection="inherit" />
+        <TextView
+            android:text="Text"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:paddingLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/background_dark"
+            android:id="@+id/txtName" />
+        <TextView
+            android:text="Descripcionnnnn ad asd as da sd asd as das d asd asd a d aad asd as da sd asd as das d asd asd a d aad asd as da sd asd as das d asd asd a d aad asd as da sd asd as das d asd asd a d aad asd as da sd asd as das d asd asd a d aad asd as da sd asd as das d asd asd a d aad asd as da sd asd as das d asd asd a d a"
+            android:textSize="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/background_dark"
+            android:id="@+id/txtDescription" />
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:padding="8dp"
+            android:minWidth="25px"
+            android:minHeight="25px">
+            <Button
+                android:layout_alignParentRight="true"
+                android:text="Aceptar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/btnAcept" />
+            <Button
+                android:layout_alignParentRight="false"
+                android:text="Cancelar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/btnCancel" />
+        </RelativeLayout>
+        <EditText
+            android:id="@+id/txtMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences|textAutoCorrect" />
+    </LinearLayout>
+</ScrollView>
