@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using Android.App;
 using Android.OS;
 using Android.Provider;
-using Android.Views;
 using Android.Widget;
 using SQLite;
 
@@ -22,12 +21,7 @@ namespace TwittersList.Droid
 
 
 
-            var uri = ContactsContract.Contacts.ContentUri;
-            string[] projection = {
-                       ContactsContract.Contacts.InterfaceConsts.Id,
-                       ContactsContract.Contacts.InterfaceConsts.DisplayName,
-                       ContactsContract.Contacts.InterfaceConsts.PhotoId,
-                    };
+          
 
 
 
@@ -128,176 +122,5 @@ namespace TwittersList.Droid
 
 
 
-    }
-    [Table("Items")]
-    public class Stock
-    {
-        [PrimaryKey, AutoIncrement, Column("_id")]
-        public int Id { get; set; }
-        [MaxLength(8)]
-        public string Symbol { get; set; }
-    }
-    public class HomeMasterScreenAdapter : BaseAdapter<TableItem>
-    {
-        List<TableItem> items;
-        Activity context;
-        public HomeMasterScreenAdapter(Activity context, List<TableItem> items)
-            : base()
-        {
-            this.context = context;
-            this.items = items;
-        }
-        public override long GetItemId(int position)
-        {
-            return position;
-        }
-        public override TableItem this[int position]
-        {
-            get { return items[position]; }
-        }
-        public override int Count
-        {
-            get { return items.Count; }
-        }
-        public override View GetView(int position, View convertView, ViewGroup parent)
-        {
-            var item = items[position];
-            View view = convertView;
-            if (view == null) // no view to re-use, create new
-                view = context.LayoutInflater.Inflate(Resource.Layout.CustomView, null);
-            view.FindViewById<TextView>(Resource.Id.Text1).Text = item.Heading;
-            view.FindViewById<TextView>(Resource.Id.Text2).Text = item.SubHeading;
-            view.FindViewById<ImageView>(Resource.Id.Image).SetImageResource(item.ImageResourceId);
-            return view;
-        }
-    }
-
-    public class HomeScreenAdapter : BaseAdapter<string>
-    {
-
-
-
-        public List<String> items = new List<string>();
-
-        public void AddItem(string item)
-        {
-            this.items.Add(item);
-            this.NotifyDataSetChanged();
-        }
-        Activity context;
-        public HomeScreenAdapter(Activity context, List<String> items) : base()
-        {
-            this.context = context;
-            this.items = items;
-        }
-        public override long GetItemId(int position)
-        {
-
-            return position;
-        }
-        public override string this[int position]
-        {
-            get { return items[position]; }
-        }
-        public override int Count
-        {
-            get { return items.Count; }
-        }
-        public override View GetView(int position, View convertView, ViewGroup parent)
-        {
-            View view = convertView; // re-use an existing view, if one is available
-            if (view == null) // otherwise create a new one
-                view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItem1, null);
-            view.FindViewById<TextView>(Android.Resource.Id.Text1).Text = items[position];
-            return view;
-        }
-
-    }
-
-    public class TodoScreenAdapter : BaseAdapter<TableItem>
-    {
-        List<TableItem> items;
-        Activity context;
-        public TodoScreenAdapter(Activity context, List<TableItem> items)
-            : base()
-        {
-            this.context = context;
-            this.items = items;
-        }
-        public override long GetItemId(int position)
-        {
-            return position;
-        }
-        public override TableItem this[int position]
-        {
-            get { return items[position]; }
-        }
-        public override int Count
-        {
-            get { return items.Count; }
-        }
-        public override View GetView(int position, View convertView, ViewGroup parent)
-        {
-            var item = items[position];
-
-            // SIMPLE LIST ITEM 1
-            View view = convertView;
-            //if (view == null)
-            //	view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItem1, null);
-            //	view.FindViewById<TextView>(Android.Resource.Id.Text1).Text = item.Heading;
-
-            // SIMPLE LIST ITEM 2
-            //View view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItem2, null);
-            //view.FindViewById<TextView>(Android.Resource.Id.Text1).Text = item.Heading;
-            //view.FindViewById<TextView>(Android.Resource.Id.Text2).Text = item.SubHeading;
-
-            // SIMPLE SELECTABLE LIST ITEM
-            // View view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleSelectableListItem, null);
-            // view.FindViewById<TextView>(Android.Resource.Id.Text1).Text = item.Heading;
-
-            // SIMPLE LIST ITEM ACTIVATED 1
-            //View view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItemActivated1, null);
-            //view.FindViewById<TextView>(Android.Resource.Id.Text1).Text = item.Heading;
-
-            // SIMPLE LIST ITEM ACTIVATED 2
-            //View view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItemActivated2, null);
-            //view.FindViewById<TextView>(Android.Resource.Id.Text1).Text = item.Heading;
-            //view.FindViewById<TextView>(Android.Resource.Id.Text2).Text = item.SubHeading;
-
-            // SIMPLE LIST ITEM CHECKED
-            //View view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItemChecked, null);
-            //view.FindViewById<TextView>(Android.Resource.Id.Text1).Text = item.Heading;
-
-            // SIMPLE LIST ITEM MULTIPLE CHOICE
-            //View view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItemMultipleChoice, null);
-            //view.FindViewById<TextView>(Android.Resource.Id.Text1).Text = item.Heading;
-
-            // SIMPLE LIST ITEM SINGLE CHOICE
-            //View view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItemSingleChoice, null);
-            //view.FindViewById<TextView>(Android.Resource.Id.Text1).Text = item.Heading;
-
-            // TWO LINE LIST ITEM
-            //View view = context.LayoutInflater.Inflate(Android.Resource.Layout.TwoLineListItem, null);
-            //view.FindViewById<TextView>(Android.Resource.Id.Text1).Text = item.Heading;
-            //view.FindViewById<TextView>(Android.Resource.Id.Text2).Text = item.SubHeading;
-
-            // ACTIVITY LIST ITEM
-            view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItemChecked, null);
-            view.FindViewById<TextView>(Android.Resource.Id.Text1).Text = item.Heading;
-            ImageView img = view.FindViewById<ImageView>(Android.Resource.Id.Icon);
-
-
-            // TEST LIST ITEM
-            //View view = context.LayoutInflater.Inflate(Android.Resource.Layout.TestListItem, null);
-            //view.FindViewById<TextView>(Android.Resource.Id.Text1).Text = item.Heading;
-
-            return view;
-        }
-    }
-    public class TableItem
-    {
-        public string Heading { get; set; }
-        public string SubHeading { get; set; }
-        public int ImageResourceId { get; set; }
     }
 }

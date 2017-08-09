@@ -12,7 +12,6 @@
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
-    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
@@ -77,13 +76,18 @@
     <Compile Include="Fragments\MenuFragment.cs" />
     <Compile Include="TakePictureActivity.cs" />
     <Compile Include="SqlActivity.cs" />
+    <Compile Include="ContactsProvider\HomeMasterScreenAdapter.cs" />
+    <Compile Include="Stock.cs" />
+    <Compile Include="TableItem.cs" />
+    <Compile Include="ContactsProvider\HomeScreenAdapter.cs" />
+    <Compile Include="ContactsProvider\TodoScreenAdapter.cs" />
     <Compile Include="ContentProviderActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
-    <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="packages.config" />
+    <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -116,9 +120,13 @@
     <AndroidResource Include="Resources\Drawable-hdpi\Vegetables.jpg" />
     <AndroidResource Include="Resources\layout\CustomView.axml" />
     <AndroidResource Include="Resources\Drawable\CustomSelector.axml" />
+    <AndroidResource Include="Resources\values\Colors.xml" />
+    <AndroidResource Include="Resources\values-v21\styles.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fragments\" />
+    <Folder Include="ContactsProvider\" />
+    <Folder Include="Resources\values-v21\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
