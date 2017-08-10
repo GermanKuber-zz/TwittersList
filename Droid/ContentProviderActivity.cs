@@ -14,7 +14,7 @@ using Android.Widget;
 
 namespace TwittersList.Droid
 {
-    [Activity(Label = "ContentProviderActivity",MainLauncher = true)]
+    [Activity(Label = "ContentProviderActivity", MainLauncher = false)]
     public class ContentProviderActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwittersList.Droid", "Droid
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwittersList.iOS", "iOS\TwittersList.iOS.csproj", "{2895E7C7-1DBB-4742-8322-F7F02A20BBED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwittersList.Binding", "TwittersList.Binding\TwittersList.Binding.csproj", "{F938F794-8E1B-43AB-8251-4268E3CDBBD2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,5 +55,17 @@ Global
 		{2895E7C7-1DBB-4742-8322-F7F02A20BBED}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{2895E7C7-1DBB-4742-8322-F7F02A20BBED}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{2895E7C7-1DBB-4742-8322-F7F02A20BBED}.Debug|iPhone.Build.0 = Debug|iPhone
+		{F938F794-8E1B-43AB-8251-4268E3CDBBD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F938F794-8E1B-43AB-8251-4268E3CDBBD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F938F794-8E1B-43AB-8251-4268E3CDBBD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F938F794-8E1B-43AB-8251-4268E3CDBBD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F938F794-8E1B-43AB-8251-4268E3CDBBD2}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{F938F794-8E1B-43AB-8251-4268E3CDBBD2}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{F938F794-8E1B-43AB-8251-4268E3CDBBD2}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{F938F794-8E1B-43AB-8251-4268E3CDBBD2}.Release|iPhone.Build.0 = Release|Any CPU
+		{F938F794-8E1B-43AB-8251-4268E3CDBBD2}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{F938F794-8E1B-43AB-8251-4268E3CDBBD2}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{F938F794-8E1B-43AB-8251-4268E3CDBBD2}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{F938F794-8E1B-43AB-8251-4268E3CDBBD2}.Debug|iPhone.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal

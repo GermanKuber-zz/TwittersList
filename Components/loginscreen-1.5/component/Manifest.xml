@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component format="1" id="loginscreen" is-shell="true">
+  <name>Login Screen</name>
+  <publisher>Xamarin</publisher>
+  <publisher-url>http://Xamarin.com/</publisher-url>
+  <version>1.5</version>
+  <summary>Allows you to add login, registration and reset password features to your iOS and Android applications.</summary>
+  <packages>
+    <package id="Xamarin.LoginScreen" version="1.5" framework="android" />
+    <package id="Xamarin.LoginScreen" version="1.5" framework="ios-unified" />
+  </packages>
+  <screenshots>
+    <img src="screenshots/00.png" title="00" />
+  </screenshots>
+  <samples>
+    <sample id="LoginScreen.iOS.Sample">
+      <name>iOS Sample</name>
+      <summary>iOS Sample</summary>
+    </sample>
+    <sample id="LoginScreen.Android.Sample">
+      <name>Android Sample</name>
+      <summary>Android Sample</summary>
+    </sample>
+  </samples>
+</component>
